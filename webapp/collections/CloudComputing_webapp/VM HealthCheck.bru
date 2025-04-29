@@ -1,0 +1,11 @@
+meta {
+  name: VM HealthCheck
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://159.223.182.80:3000/healthz
+  body: none
+  auth: none
+}

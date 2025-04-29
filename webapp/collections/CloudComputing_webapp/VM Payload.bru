@@ -1,0 +1,22 @@
+meta {
+  name: VM Payload
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://159.223.182.80:3000/healthz?hello=welcome
+  body: none
+  auth: none
+}
+
+query {
+  hello: welcome
+}
+
+body:json {
+  {
+      "name": "soumya"
+  }
+  
+}

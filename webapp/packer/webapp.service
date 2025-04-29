@@ -1,0 +1,24 @@
+[Unit]
+Description=CSYE6225 Web Application
+After=network.target
+
+[Service]
+Type=simple
+User=csye6225
+Group=csye6225
+WorkingDirectory=/opt/csye6225/webapp
+
+# Load environment variables
+EnvironmentFile=/opt/csye6225/webapp/.env
+
+# Run the application
+ExecStart=/usr/bin/npm run dev
+Restart=on-failure
+
+# Standard output and error logging to a log file
+StandardOutput=append:/var/log/csye6225_webapp.log
+StandardError=append:/var/log/csye6225_webapp.log
+SyslogIdentifier=csye6225_webapp
+
+[Install]
+WantedBy=multi-user.target

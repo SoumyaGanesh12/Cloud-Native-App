@@ -1,0 +1,7 @@
+db_name      = "webapp_db"
+db_user      = "db_user"
+db_pass      = "user1234"
+test_db_name = "test_db"
+port         = "3000"
+# gcp_project_id  = "csye6225-devproject"
+demo_account_id = "920373003609"

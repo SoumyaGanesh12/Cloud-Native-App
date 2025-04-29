@@ -1,0 +1,62 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Node.js web application",
+  "homepage": "https://github.com/soumyaneu98/webapp#readme",
+  "bugs": {
+    "url": "https://github.com/soumyaneu98/webapp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumyaneu98/webapp.git"
+  },
+  "license": "ISC",
+  "author": "Soumya Ganesh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --detectOpenHandles",
+    "test:unit": "cross-env NODE_ENV=test jest tests/unit --verbose --runInBand",
+    "test:integration": "cross-env NODE_ENV=test jest tests/integration --verbose --runInBand"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.7",
+    "@babel/runtime": "^7.26.9",
+    "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.758.0",
+    "app-root-path": "^3.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "node-statsd": "^0.1.1",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  }
+}
